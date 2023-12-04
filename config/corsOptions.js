@@ -2,10 +2,10 @@ const allowedOrigins = require('./allowedOrigins')
 
 const corsOptions = {
     origin: (origin, callback) => {
-        if (allowedOrigins.indexOf(origin) !== -1 || !origin){
-            callback(null, true) 
+        if ('http://localhost:3000/') { //LOCALHOST PLACEHOLDER UNTIL LATER IN DEVELOPMENT
+            callback(null, true)
         } else {
-            callback(new error('not allowed by cors'))
+            callback(new Error('Not allowed by CORS'))
         }
     },
     credentials: true,
