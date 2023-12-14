@@ -22,6 +22,12 @@ const getAllUsers = asyncHandler(async (req, res) => {
 // 	"roles": ["Employee"]
 // }
 
+// {
+//     "username": "John",
+//     "password": "12341234",
+//     "roles" : ["Employee"]
+// }
+
 // @desc Create new user
 // @route POST /users
 // @access Private

@@ -83,7 +83,7 @@ const refresh = (req, res) => {
                 { expiresIn: '15m' }
             )
 
-            rex.json({ accessToken })
+            res.json({ accessToken })
         })
     )
 }
@@ -96,7 +96,6 @@ const logout = (req, res) => {
     if (!cookies?.jwt) return res.sendStatus(204) // No content
     res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true })
     res.json({ message: 'Cookie cleared' })
-
 }
 
 module.exports = {
